@@ -14,13 +14,14 @@ class DayOfMonthField(models.IntegerField):
 
 class OutgoingsCategory(models.Model):
     name = models.CharField(max_length=40)
-    day_of_month = DayOfMonthField()
-    total = models.DecimalField(max_digits=7, decimal_places=2)
+
 
 
 class RecurringPayment(models.Model):
     owner = models.ForeignKey(User, on_delete=models.PROTECT)
     date = models.DateField()
+    day_of_month = DayOfMonthField(default=1)
+    total = models.DecimalField(max_digits=7, decimal_places=2, default=0)
 
 
 class Payment(models.Model):

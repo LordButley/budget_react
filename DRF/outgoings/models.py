@@ -13,6 +13,9 @@ class DayOfMonthField(models.IntegerField):
         super().__init__(*args, **kwargs)
 
 class OutgoingsCategory(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Categories"
     name = models.CharField(max_length=40)
 
 

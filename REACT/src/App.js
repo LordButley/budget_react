@@ -9,6 +9,11 @@ function App() {
         <span>React</span>
         <span> Budget</span>
       </h1>
+      <h2>SIDEBAR</h2>
+      <h2>Dashboard</h2>
+      <h2>Combined</h2>
+      <h2>Income</h2>
+      <h2>Outgoings</h2>
     </div>
   );
 }

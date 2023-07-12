@@ -9,10 +9,3 @@ class PaymentSerializer(serializers.ModelSerializer):
         model = Payment
         fields = "__all__"
         read_only_fields = ["name", "total", "date", "recurring", "owner", "category"]
-
-    # def get_fields(self):
-    #     fields = super().get_fields()
-    #     for field in fields.values():
-    #         field.read_only = True
-    #     print(fields)
-    #     return fields

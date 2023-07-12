@@ -15,6 +15,14 @@ class PaymentList(APIView):
 
 class PaymentView(APIView):
     def get(self, request, id):
-        payment = get_object_or_404(id=id)
+        payment = get_object_or_404(Payment, id=id)
         serializer = PaymentSerializer(payment)
         return Response(serializer.data)
+    
+    def put(self, request, id):
+        payment = get_object_or_404(Payment,id=id)
+        serializer = PaymentSerializer(payment, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors())

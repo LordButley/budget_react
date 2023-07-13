@@ -1,3 +1,17 @@
 .sidebarlinks {
     text-decoration: none;
+    color: black;
+}
+
+.sidebardivs {
+    margin: 5px 0px;
+}
+
+/* .sidebarcontainer {
+    height:50vh;
+} */
+
+.sidebaricons {
+    width:20px;
+    padding-right: 5px;
 }
